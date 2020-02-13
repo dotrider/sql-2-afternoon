@@ -117,3 +117,49 @@
 ------------------------
 --GROUP BY--
 ------------------------
+
+--1
+-- SELECT COUNT(*), g.name
+-- FROM track t
+-- JOIN genre g ON g.genre_id = t.genre_id
+-- GROUP BY g.name
+
+--2
+-- SELECT COUNT(*), g.name
+-- FROM track t
+-- JOIN genre g ON g.genre_id = t.genre_id
+-- WHERE g.name = 'Pop' OR g.name ='Rock'
+-- GROUP BY g.name;
+
+--3
+-- SELECT a.name, COUNT(*)
+-- FROM album al
+-- Join artist a ON a.artist_id = al.artist_id
+-- GROUP BY a.name;
+
+------------------------
+--Distinct--
+------------------------
+
+--1
+-- SELECT DISTINCT composer
+-- FROM track;
+
+--2
+-- SELECT DISTINCT billing_postal_code
+-- FROM invoice;
+
+--3
+-- SELECT DISTINCT company
+-- FROM customer;
+
+------------------------
+--Delete Rows--
+------------------------
+
+--1
+-- DELETE FROM practice_delete WHERE type = 'bronze';
+
+--2
+-- DELETE FROM practice_delete WHERE value = 150;
+
